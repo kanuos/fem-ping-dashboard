@@ -13,7 +13,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   gap: 30px;
-  margin-top: auto;
+  margin-top: 40px;
 }
 footer ul {
   display: flex;
@@ -104,7 +104,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-  padding: 40px 10px;
+  padding: 10px;
   gap: 40px;
 }
 header > img {

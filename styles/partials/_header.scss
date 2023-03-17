@@ -5,7 +5,7 @@ header {
   @include flex(column);
   justify-content: space-between;
   height: auto;
-  padding: $gap-2 $gap-1;
+  padding: $gap-1;
   gap: $gap-2;
 
   // brand logo

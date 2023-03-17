@@ -3,7 +3,7 @@
 footer {
   @include flex(column);
   gap: $footerUnit;
-  margin-top: auto;
+  margin-top: $gap-2;
 
   ul {
     @include flex(row);
