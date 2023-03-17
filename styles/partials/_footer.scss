@@ -1,0 +1,51 @@
+@import "../utils/mixins";
+
+footer {
+  @include flex(column);
+  gap: $footerUnit;
+  margin-top: auto;
+
+  ul {
+    @include flex(row);
+    list-style: none;
+    gap: calc($base * 0.5);
+    li {
+      a,
+      a:visited {
+        height: $footerUnit;
+        width: $footerUnit;
+        aspect-ratio: 1 / 1;
+        display: block;
+        border: 1px solid $secondary-1;
+        border-radius: 50%;
+        @include flex(row);
+        transition: $effect;
+
+        & svg {
+          display: block;
+          height: 50%;
+          width: auto;
+          fill: $primary;
+          transition: $effect;
+        }
+
+        &:hover {
+          background-color: $primary;
+          border-color: $primary;
+          transform: translateY(-10%);
+          filter: drop-shadow($shadow);
+
+          svg {
+            fill: $secondary-1;
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: calc($base * 0.5);
+    font-weight: 300;
+    color: $neutral-1;
+  }
+}

@@ -9,3 +9,8 @@ $neutral-2: hsl(209, 33%, 12%);
 
 // Unit variables
 $base: 20px;
+$footerUnit : calc($base * 1.5);
+
+// misc
+$effect : all .25s ease;
+$shadow : 0 1px $base rgba(0 0 0 / .125);
