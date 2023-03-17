@@ -1,0 +1,47 @@
+dialog {
+  &[open] {
+    position: fixed;
+    outline-color: transparent;
+    border: 0;
+    height: 100vh;
+    inset: 0;
+    height: 100dvh;
+    width: 100%;
+    @include flex(row);
+    background-color: rgba(0 0 0 / 0.75);
+    transition: $effect;
+  }
+
+  section {
+    padding: $base;
+    width: 80%;
+    max-width: calc($container * 0.7);
+    border-radius: 5px;
+    background-color: white;
+    filter: drop-shadow($shadow);
+
+    h2 {
+      font-weight: 300;
+      color: $neutral-1;
+      margin-bottom: $gap-1;
+      font-size: $base;
+
+      strong {
+        font-weight: 600;
+        color: $neutral-2;
+      }
+    }
+
+    p {
+      color: $neutral-2;
+      font-size: calc($base * 0.6);
+    }
+
+    @include button();
+
+    button {
+      margin-top: $gap-2;
+      width: fit-content !important;
+    }
+  }
+}

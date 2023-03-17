@@ -4,3 +4,32 @@
   justify-content: center;
   flex-direction: $direction;
 }
+
+@mixin button() {
+  button {
+    &,
+    &:focus,
+    &:focus-visible {
+      width: 100%;
+      display: block;
+      padding: $gap-1 $gap-2;
+      border-radius: $rounded;
+      font-size: $formFont;
+      outline: 0;
+      transition: $effect;
+      max-width: calc($container * 0.7);
+      border: 0;
+      font-weight: 300;
+      color: white;
+      background-color: $primary;
+      filter: drop-shadow($shadow);
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.85;
+    }
+  }
+}

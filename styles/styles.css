@@ -161,8 +161,7 @@ header form small {
   font-weight: 300;
   font-style: italic;
 }
-header form input,
-header form button {
+header form input {
   width: 100%;
   display: block;
   padding: 10px 40px;
@@ -170,15 +169,10 @@ header form button {
   font-size: 13px;
   outline: 0;
   transition: all 0.25s ease;
-}
-header form input {
   border: 1.5px solid hsl(223, 100%, 88%);
 }
 header form input:focus-visible {
   border-color: hsl(0, 0%, 59%);
-}
-header form input:invalid {
-  border-color: hsl(354, 100%, 66%);
 }
 header form input::-moz-placeholder {
   color: hsl(0, 0%, 59%);
@@ -186,7 +180,17 @@ header form input::-moz-placeholder {
 header form input::placeholder {
   color: hsl(0, 0%, 59%);
 }
+header form .invalid-input {
+  border-color: hsl(354, 100%, 66%);
+}
 header form button, header form button:focus, header form button:focus-visible {
+  width: 100%;
+  display: block;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-size: 13px;
+  outline: 0;
+  transition: all 0.25s ease;
   max-width: 28rem;
   border: 0;
   font-weight: 300;
@@ -198,6 +202,69 @@ header form button, header form button:focus, header form button:focus-visible {
 }
 header form button:hover, header form button:focus {
   opacity: 0.85;
+}
+
+dialog[open] {
+  position: fixed;
+  outline-color: transparent;
+  border: 0;
+  height: 100vh;
+  inset: 0;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 0.25s ease;
+}
+dialog section {
+  padding: 20px;
+  width: 80%;
+  max-width: 28rem;
+  border-radius: 5px;
+  background-color: white;
+  filter: drop-shadow(0 1px 20px rgba(0, 0, 0, 0.125));
+}
+dialog section h2 {
+  font-weight: 300;
+  color: hsl(0, 0%, 59%);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+dialog section h2 strong {
+  font-weight: 600;
+  color: hsl(209, 33%, 12%);
+}
+dialog section p {
+  color: hsl(209, 33%, 12%);
+  font-size: 12px;
+}
+dialog section button, dialog section button:focus, dialog section button:focus-visible {
+  width: 100%;
+  display: block;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-size: 13px;
+  outline: 0;
+  transition: all 0.25s ease;
+  max-width: 28rem;
+  border: 0;
+  font-weight: 300;
+  color: white;
+  background-color: hsl(223, 87%, 63%);
+  filter: drop-shadow(0 1px 20px rgba(0, 0, 0, 0.125));
+  cursor: pointer;
+  text-transform: capitalize;
+}
+dialog section button:hover, dialog section button:focus {
+  opacity: 0.85;
+}
+dialog section button {
+  margin-top: 40px;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 
 @media screen and (min-width: 1024px) {

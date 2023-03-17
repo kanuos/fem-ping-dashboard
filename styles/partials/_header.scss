@@ -61,8 +61,7 @@ header {
       font-style: italic;
     }
 
-    input,
-    button {
+    input {
       width: 100%;
       display: block;
       padding: $gap-1 $gap-2;
@@ -70,41 +69,22 @@ header {
       font-size: $formFont;
       outline: 0;
       transition: $effect;
-    }
 
-    input {
       border: 1.5px solid $secondary-1;
 
       &:focus-visible {
         border-color: $neutral-1;
       }
 
-      &:invalid {
-        border-color: $secondary-2;
-      }
-
       &::placeholder {
         color: $neutral-1;
       }
     }
-    button {
-      &,
-      &:focus,
-      &:focus-visible {
-        max-width: calc($container * 0.7);
-        border: 0;
-        font-weight: 300;
-        color: white;
-        background-color: $primary;
-        filter: drop-shadow($shadow);
-        cursor: pointer;
-        text-transform: capitalize;
-      }
 
-      &:hover,
-      &:focus {
-        opacity: 0.85;
-      }
+    .invalid-input {
+      border-color: $secondary-2;
     }
+
+    @include button();
   }
 }
