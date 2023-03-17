@@ -15,3 +15,9 @@ $footerUnit: calc($base * 1.5);
 $effect: all 0.25s ease;
 $shadow: 0 1px $base rgba(0 0 0 / 0.125);
 $container: 40rem;
+
+$gap-1: calc($base * 0.5);
+$gap-2: calc($base * 2);
+
+$rounded: calc($base);
+$formFont: calc($base * 0.65);

@@ -1,0 +1,23 @@
+@media screen and (min-width: 1024px) {
+  header {
+    section {
+      h1 {
+        font-size: calc($base * 1.5);
+      }
+    }
+    form {
+      @include flex(row);
+      align-items: flex-start;
+
+      div {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-basis: 70%;
+      }
+
+      button {
+        flex-basis: 30%;
+      }
+    }
+  }
+}

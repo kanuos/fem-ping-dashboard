@@ -1,0 +1,110 @@
+@import "../utils/mixins";
+
+header {
+  width: 100%;
+  @include flex(column);
+  justify-content: space-between;
+  height: auto;
+  padding: $gap-2 $gap-1;
+  gap: $gap-2;
+
+  // brand logo
+  & > img {
+    height: $base;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    margin: $gap-2 0;
+  }
+
+  section {
+    @include flex(column);
+    gap: $gap-1;
+    text-align: center;
+
+    h1 {
+      font-weight: 300;
+      color: $neutral-1;
+      margin-bottom: $gap-1;
+      font-size: calc($base * 1.25);
+
+      strong {
+        font-weight: 600;
+        color: $neutral-2;
+      }
+    }
+
+    p {
+      color: $neutral-2;
+      font-size: calc($base * 0.6);
+    }
+  }
+
+  form {
+    @include flex(column);
+    gap: $gap-1;
+    width: 100%;
+
+    div {
+      width: 100%;
+      max-width: calc($container * 0.7);
+      @include flex(column);
+      gap: $gap-1;
+    }
+
+    // error
+    small {
+      color: $secondary-2;
+      padding: 0 $gap-2;
+      font-size: $gap-1;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    input,
+    button {
+      width: 100%;
+      display: block;
+      padding: $gap-1 $gap-2;
+      border-radius: $rounded;
+      font-size: $formFont;
+      outline: 0;
+      transition: $effect;
+    }
+
+    input {
+      border: 1.5px solid $secondary-1;
+
+      &:focus-visible {
+        border-color: $neutral-1;
+      }
+
+      &:invalid {
+        border-color: $secondary-2;
+      }
+
+      &::placeholder {
+        color: $neutral-1;
+      }
+    }
+    button {
+      &,
+      &:focus,
+      &:focus-visible {
+        max-width: calc($container * 0.7);
+        border: 0;
+        font-weight: 300;
+        color: white;
+        background-color: $primary;
+        filter: drop-shadow($shadow);
+        cursor: pointer;
+        text-transform: capitalize;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 0.85;
+      }
+    }
+  }
+}
