@@ -60,4 +60,38 @@ footer p {
   font-size: 10px;
   font-weight: 300;
   color: hsl(0, 0%, 59%);
+}
+
+main {
+  padding: 20px;
+  height: auto;
+  min-height: 100vh;
+  min-height: d100vh;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 40rem;
+  margin: auto auto;
+}
+main picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+main picture img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+  -o-object-position: center;
+     object-position: center;
+  pointer-events: none;
 }/*# sourceMappingURL=styles.css.map */

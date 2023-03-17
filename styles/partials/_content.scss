@@ -1,0 +1,29 @@
+@import "../utils/mixins";
+
+main {
+  padding: $base;
+  height: auto;
+  min-height: 100vh;
+  min-height: d100vh;
+  overflow-x: hidden;
+  @include flex(column);
+  gap: $base;
+  justify-content: space-between;
+  max-width: $container;
+  margin: auto auto;
+
+  picture {
+    @include flex(row);
+    width: 100%;
+    height: auto;
+
+    img {
+      display: block;
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+      object-position: center;
+      pointer-events: none;
+    }
+  }
+}
